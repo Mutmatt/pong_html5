@@ -1,8 +1,3 @@
-jQuery(document).ready(function($){
-	  initPong();
-    setupKeyListeners();
-});
-
 var drawLoopPong;
 var $canvasPong;
 var canvasObjectPong;
@@ -19,7 +14,7 @@ var ball;
 var INTERVAL = 20; //20ms interval 
 var volleyCounter = 0;
 var stuckWatcher = 0;
-var keys = {};
+var keys = new Array();
 var keyMap = {
     87: 'P1UP',
     83: 'P1DOWN',
@@ -29,6 +24,11 @@ var keyMap = {
     getKey = function(key) {
         return keyMap[(key.which || key.keyCode)] || '';
     };
+
+jQuery(document).ready(function($){
+	  initPong();
+    setupKeyListeners();
+});
 
 
 function setupKeyListeners() {
