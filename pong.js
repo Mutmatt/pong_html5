@@ -32,7 +32,7 @@ jQuery(document).ready(function($){
 
 
 function setupKeyListeners() {
-    jQuery(document).keydown(function(event) {
+    jQuery($canvasPong).keydown(function(event) {
         switch (getKey(event)) {
         case 'P1UP':
             event.preventDefault();
@@ -55,7 +55,7 @@ function setupKeyListeners() {
         }
     });
 
-    jQuery(document).keyup(function(event) {
+    jQuery($canvasPong).keyup(function(event) {
         switch (getKey(event)) {
         case 'P1UP':
             event.preventDefault();
